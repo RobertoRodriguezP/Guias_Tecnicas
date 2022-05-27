@@ -1,3 +1,4 @@
+
 package co.com.choucair.certification.Guias_Tecnicas.tasks;
 
 import co.com.choucair.certification.Guias_Tecnicas.userinterface.ChoucairAcademyPage;
@@ -18,6 +19,5 @@ public class OpenUp implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Open.browserOn(choucairAcademyPage));
-
     }
 }
