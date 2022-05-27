@@ -20,16 +20,17 @@ public class ChoucairAcademyStepDefintions {
 
     @Before
     public void setStage (){OnStage.setTheStage(new OnlineCast());}
-
+/*
     @Given("^than brando wants to learn automation at the academy Choucair$")
     public void thanBrandoWantsToLearnAutomationAtTheAcademyChoucair(){
          OnStage.theActorCalled("Brandon").wasAbleTo(OpenUp.thePage(),(Login.onThePage()));// );
     }
-    /*
+    */
+    @Given("^than brando wants to learn automation at the academy Choucair$")
     public void thanBrandoWantsToLearnAutomationAtTheAcademyChoucair(List<AcademyChoucairData> AcademyChoucairData)throws Exception {
-        OnStage.theActorCalled("Brandon").wasAbleTo(OpenUp.thePage());//,(Login.onThePage(AcademyChoucairData.get(0).getStrUser(),AcademyChoucairData.get(0).getStrPassword())));
+        OnStage.theActorCalled("Brandon").wasAbleTo(OpenUp.thePage(), Login.onThePage(AcademyChoucairData.get(0).getStrUser(),AcademyChoucairData.get(0).getStrPassword()));
     }
-*/
+
     @When("^he search for the course (.*) on the choucair academy platform$")
     public void heSearchForTheCourseRecursosAutomatizaciònBancolombiaOnTheChoucairAcademyPlatform(List<AcademyChoucairData> AcademyChoucairData) throws Exception {
         OnStage.theActorInTheSpotlight().attemptsTo(Search.the(AcademyChoucairData.get(0).getStrCourse()));
