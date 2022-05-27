@@ -17,7 +17,7 @@ public class OpenUp implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Open.browserOn(PruebaBusquedaGoogle));
+        actor.attemptsTo(Open.browserOn(choucairAcademyPage));
 
     }
 }
